@@ -144,7 +144,7 @@ target_include_directories(
                             $<INSTALL_INTERFACE:${CMAKE_INSTALL_INCLUDEDIR}>)
 target_link_libraries(${PROJECT_NAME} INTERFACE Boost::serialization)
 if(CURVES_WITH_PINOCCHIO_SUPPORT)
-  target_link_libraries(${PROJECT_NAME} INTERFACE pinocchio::pinocchio)
+  target_link_libraries(${PROJECT_NAME} INTERFACE pinocchio::pinocchio_headers)
   target_compile_definitions(${PROJECT_NAME}
                              INTERFACE -DCURVES_WITH_PINOCCHIO_SUPPORT)
 endif(CURVES_WITH_PINOCCHIO_SUPPORT)
